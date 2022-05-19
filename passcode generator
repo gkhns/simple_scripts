@@ -1,0 +1,22 @@
+import string
+import random
+
+# Problem: Generate a Passcode with 10 characters
+# Password policy: 3 upper case + 3 lower case + 2 punctuation + 2 numbers
+
+# Random character generation
+upper_case = random.choices(string.ascii_uppercase, k=3)
+lower_case = random.choices(string.ascii_lowercase, k=3)
+symbol_case = random.choices(string.punctuation, k= 2)
+number_case = random.choices(string.digits, k= 2)
+
+# Merge characters 
+passcode_merge = upper_case +lower_case+symbol_case+number_case
+
+# Shuffle characters
+random.shuffle(passcode_merge)
+
+# Join characters
+passcode_join = "".join(passcode_merge)
+
+print(passcode_join)
