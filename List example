@@ -1,0 +1,16 @@
+# Print a list of all possible coordinates given by (i,j,k) on a 3D grid where the sum of (i+j+k) is not equal to n.
+
+if __name__ == '__main__':
+    x = int(raw_input())
+    y = int(raw_input())
+    z = int(raw_input())
+    n = int(raw_input())
+    
+    results = []
+    for i in range (0,x+1):
+        for j in range (0,y+1):
+            for k in range (0,z+1):
+                if i+j+k != n:
+                    results.append([i,j,k])
+                                  
+    print(results)
